@@ -1,9 +1,8 @@
-import { schema, CustomMessages } from '@ioc:Adonis/Core/Validator'
+import { schema, rules, CustomMessages } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import { rules } from '@ioc:Adonis/Core/Validator'
 
-export default class FilmeValidator {
-  constructor(protected ctx: HttpContextContract) {}
+export default class TopicValidator {
+  constructor(protected ctx: HttpContextContract) { }
 
   /*
    * Define schema to validate the "shape", "type", "formatting" and "integrity" of data.
@@ -24,6 +23,17 @@ export default class FilmeValidator {
    *     ])
    *    ```
    */
+  public schema = schema.create({
+    titulo: schema.string({}, [
+      rules.required()
+    ]),
+    ano: schema.string({}, [
+      rules.required()
+    ]),
+    mensagem: schema.string({}, [
+      rules.required()
+    ]),
+  })
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
@@ -36,5 +46,7 @@ export default class FilmeValidator {
    * }
    *
    */
-  
+  public messages: CustomMessages = {
+    required: "O {{field}} é obrigatório para cadastrar o filme!!!",
+  }
 }
