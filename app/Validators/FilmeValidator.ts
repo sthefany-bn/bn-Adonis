@@ -24,17 +24,6 @@ export default class FilmeValidator {
    *     ])
    *    ```
    */
-  public schema = schema.create({
-    titulo: schema.string({}, [
-      rules.required()
-    ]),
-    duracao: schema.dateTime({}, [
-      rules.required()
-    ]),
-    lancamento: schema.date({}, [
-      rules.required()
-    ]),
-  })
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
@@ -47,7 +36,5 @@ export default class FilmeValidator {
    * }
    *
    */
-  public messages: CustomMessages = {
-    required: "O {{field}} é obrigatório!!"
-  }
+  
 }

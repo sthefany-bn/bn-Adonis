@@ -22,6 +22,17 @@ import Server from '@ioc:Adonis/Core/Server'
 */
 Server.middleware.register([
   () => import('@ioc:Adonis/Core/BodyParser'),
+  public schema = schema.create({
+    titulo: schema.string({}, [
+      rules.required()
+    ]),
+    duracao: schema.dateTime({}, [
+      rules.required()
+    ]),
+    lancamento: schema.date({}, [
+      rules.required()
+    ]),
+  })
 ])
 
 /*
@@ -42,4 +53,7 @@ Server.middleware.register([
 */
 Server.middleware.registerNamed({
   auth: () => import('App/Middleware/Auth')
+  public messages: CustomMessages = {
+    required: "O {{field}} é obrigatório!!"
+  }
 })
