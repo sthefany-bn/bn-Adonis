@@ -1,7 +1,7 @@
 import { schema, rules, CustomMessages } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
-export default class TopicValidator {
+export default class FilmeValidator {
   constructor(protected ctx: HttpContextContract) { }
 
   /*

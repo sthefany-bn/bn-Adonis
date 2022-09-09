@@ -1,5 +1,6 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Filme from 'App/Models/Filme'
+import FilmeValidator from 'App/Validators/FilmeValidator'
 
 export default class FilmesController {
   public async index({ }: HttpContextContract) {
