@@ -1,7 +1,7 @@
 ######### Cadastro Filme
 POST http://127.0.0.1:3333/filmes HTTP/1.1
 Content-Type: application/json
-Authorization: 
+Authorization: Bearer NQ.rEPBbEGY4e3J_-LUyJpTt0dkgxk4NucGhjsd6GEOcchiX76Tmx6oYtzmmrjL
 
 {
     "titulo": "Toy Story 3",
@@ -12,17 +12,17 @@ Authorization:
 ######### Listar todos os Filmes
 GET http://127.0.0.1:3333/filmes HTTP/1.1
 Content-Type: application/json
-Authorization: 
+Authorization: Bearer NQ.rEPBbEGY4e3J_-LUyJpTt0dkgxk4NucGhjsd6GEOcchiX76Tmx6oYtzmmrjL
 
 ######### Listar Filme específico
 GET http://127.0.0.1:3333/filmes/1 HTTP/1.1
 Content-Type: application/json
-Authorization: 
+Authorization: Bearer NQ.rEPBbEGY4e3J_-LUyJpTt0dkgxk4NucGhjsd6GEOcchiX76Tmx6oYtzmmrjL
 
 ######### Alterar Filme
 PUT http://127.0.0.1:3333/filmes/1 HTTP/1.1
 Content-Type: application/json
-Authorization: ////////////////////////////////
+Authorization: Bearer NQ.rEPBbEGY4e3J_-LUyJpTt0dkgxk4NucGhjsd6GEOcchiX76Tmx6oYtzmmrjL
 
 {
     "titulo": "Toy Story 4",
@@ -31,6 +31,6 @@ Authorization: ////////////////////////////////
 }
 
 ######### Apagar Filme
-DELETE  http://127.0.0.1:3333/filmes HTTP/1.1
+DELETE  http://127.0.0.1:3333/filmes/1 HTTP/1.1
 Content-Type: application/json
-Authorization: 
+Authorization: Bearer NQ.rEPBbEGY4e3J_-LUyJpTt0dkgxk4NucGhjsd6GEOcchiX76Tmx6oYtzmmrjL
