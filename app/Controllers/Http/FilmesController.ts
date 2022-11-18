@@ -16,7 +16,7 @@ export default class FilmesController {
     
   public async show({ params, response }: HttpContextContract) {
     try {
-      const filme = await Filme.findOrFail(params.id)
+      const filme = await Filme.query().where('id',params.id)
       return filme
     } catch (error) {
       response.status(400).send("Filme não encontrada!!!")

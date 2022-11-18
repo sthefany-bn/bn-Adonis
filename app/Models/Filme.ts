@@ -6,6 +6,9 @@ export default class Filme extends BaseModel {
   public id: number
 
   @column()
+  public assunto_id: number
+
+  @column()
   public titulo: string
 
   @column()
